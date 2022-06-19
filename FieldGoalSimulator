@@ -1,0 +1,1516 @@
+local lc = game:GetService("Players").LocalPlayer -- Use GetService it is important because some games change Players so use that instead of game.Players!
+local group = 14700460 -- Roblox Fan Group but put your group ID HERE
+local grouplink = ""
+local creds = "Low_CPSandELO"
+
+if lc:IsInGroup(group) then -- IS In group is the roblox API Reference pretty self explanatory 
+        local LoadingScreen = Instance.new("ScreenGui")
+        local Frame = Instance.new("Frame")
+        local UICorner = Instance.new("UICorner")
+        local Title = Instance.new("TextLabel")
+        local TextLabel = Instance.new("TextLabel")
+        local Bar = Instance.new("Frame")
+        local UICorner_2 = Instance.new("UICorner")
+        local Inside = Instance.new("Frame")
+        local UICorner_3 = Instance.new("UICorner")
+        local E = Instance.new("Frame")
+        local UICorner_4 = Instance.new("UICorner")
+        
+        --Properties:
+        
+        LoadingScreen.Name = "Loading Screen"
+        LoadingScreen.Parent = game.CoreGui
+        LoadingScreen.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+        LoadingScreen.ResetOnSpawn = false
+        
+        Frame.Parent = LoadingScreen
+        Frame.BackgroundColor3 = Color3.fromRGB(18, 20, 23)
+        Frame.Position = UDim2.new(0.367160767, 0, 0.402578801, 0)
+        Frame.Size = UDim2.new(0.264538199, 0, 0.194842413, 0)
+        
+        UICorner.Parent = Frame
+        
+        Title.Name = "Title"
+        Title.Parent = Frame
+        Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        Title.BackgroundTransparency = 1.000
+        Title.Position = UDim2.new(0.0182889588, 0, 0, 0)
+        Title.Size = UDim2.new(0.393678159, 0, 0.198529407, 0)
+        Title.Font = Enum.Font.SourceSansSemibold
+        Title.Text = "Chixs Hub Loader"
+        Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+        Title.TextScaled = true
+        Title.TextSize = 24.000
+        Title.TextWrapped = true
+        Title.TextXAlignment = Enum.TextXAlignment.Left
+        
+        TextLabel.Parent = Frame
+        TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        TextLabel.BackgroundTransparency = 1.000
+        TextLabel.Position = UDim2.new(0.0585188605, 0, 0.260454297, 0)
+        TextLabel.Size = UDim2.new(0.890804589, 0, 0.242647052, 0)
+        TextLabel.Font = Enum.Font.SourceSansSemibold
+        TextLabel.Text = "Checking if game Supported..."
+        TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+        TextLabel.TextScaled = true
+        TextLabel.TextSize = 25.000
+        TextLabel.TextWrapped = true
+        
+        Bar.Name = "Bar"
+        Bar.Parent = Frame
+        Bar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        Bar.Position = UDim2.new(0.026580615, 0, 0.598065794, 0)
+        Bar.Size = UDim2.new(0.945402324, 0, 0.191176474, 0)
+        
+        UICorner_2.CornerRadius = UDim.new(0, 3)
+        UICorner_2.Parent = Bar
+        
+        Inside.Name = "Inside"
+        Inside.Parent = Bar
+        Inside.BackgroundColor3 = Color3.fromRGB(85, 255, 127)
+        Inside.Size = UDim2.new(0, 0, 1, 0)
+        
+        UICorner_3.CornerRadius = UDim.new(0, 3)
+        UICorner_3.Parent = Inside
+        
+        E.Name = "E"
+        E.Parent = Frame
+        E.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+        E.BorderSizePixel = 0
+        E.Position = UDim2.new(0.0155988811, 0, 0.181817025, 0)
+        E.Size = UDim2.new(0.968390822, 0, 0.0147058824, 0)
+        
+        UICorner_4.CornerRadius = UDim.new(0, 20)
+        UICorner_4.Parent = E
+        
+        -- Scripts:
+        
+        local function DTBNJ_fake_script() -- LoadingScreen.LocalScript 
+            local script = Instance.new('LocalScript', LoadingScreen)
+        
+            -- Variables.
+            local frame = script.Parent.Frame
+            local bar = frame.Bar
+            local inside = bar.Inside
+            
+            local player = game.Players.LocalPlayer
+            
+            -- Functions.
+            local function ResizeBar(percent)
+                inside:TweenSize(UDim2.new(percent/100, 0, 1, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Linear, 1, true)
+                wait(1)
+            end
+            
+            -- Start loading.
+            frame.Visible = true
+            
+            -- sizes
+            frame.TextLabel.Text = "Checking if game is supported."
+            ResizeBar(0)
+            frame.TextLabel.Text = "Checking if game is supported.."
+            ResizeBar(10)
+            frame.TextLabel.Text = "Checking if game is supported..."
+            ResizeBar(20)
+            frame.TextLabel.Text = "Checking if game is supported."
+            ResizeBar(30)
+            frame.TextLabel.Text = "Checking if game is supported.."
+            ResizeBar(40)
+            frame.TextLabel.Text = "Checking if user Whitelisted..."
+            ResizeBar(50)
+            frame.TextLabel.Text = "Checking if user Whitelisted."
+            ResizeBar(50)
+            frame.TextLabel.Text = "Checking if user Whitelisted.."
+            ResizeBar(50)
+            frame.TextLabel.Text = "User Whitelisted..."
+            ResizeBar(50)
+            frame.TextLabel.Text = "Finishing up..."
+            ResizeBar(60)
+            frame.TextLabel.Text = "Checking if script is updated..."
+            ResizeBar(60)
+            frame.TextLabel.Text = "Done"
+            ResizeBar(100)
+            
+            
+            
+            -- Hide screen.
+            frame.TextLabel.Text = "Game Found - Field Goal Simulator"
+            wait(3)
+            
+            script.Parent:Destroy()
+        end
+        coroutine.wrap(DTBNJ_fake_script)()
+        wait(14)
+    
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+    local Window = Library.CreateLib("Chixs Hub -  Field Goal Simulator", "Ocean")
+    local Home = Window:NewTab("Home")
+    local HomeSection = Home:NewSection("Home")
+    local Main = Window:NewTab("Main")
+    local MainSection = Main:NewSection("Main")
+    local AutoFarm = Window:NewTab("AutoFarm")
+    local AutoFarmSection = AutoFarm:NewSection("Yards AutoFarm")
+    
+    
+    
+    
+    -- Home
+    HomeSection:NewButton("Join Discord Server", "Yes Please 👉👈", function()
+        local json = {
+            ["cmd"] = "INVITE_BROWSER",
+            ["args"] = {
+            ["code"] = "fQcSXQXSUp"
+            },
+            ["nonce"] = 'a'
+            }
+            spawn(function()
+            print(request({
+            Url = 'http://127.0.0.1:6463/rpc?v=1',
+            Method = 'POST',
+            Headers = {
+            ['Content-Type'] = 'application/json',
+            ['Origin'] = 'https://discord.com'
+            },
+            Body = game:GetService('HttpService'):JSONEncode(json),
+            }).Body)
+            end)
+                -- discord invite workspace folder save
+                if http then
+               if isfolder("Chixs") then
+               else
+                   makefolder("ChixsCool")
+               end
+            end
+            
+            if http then
+               if isfile('Chixslol.lua') then
+               else
+                   _G.invite = [[
+                local json = {
+                ["cmd"] = "INVITE_BROWSER",
+                ["args"] = {
+                ["code"] = "fQcSXQXSUp"
+                },
+                ["nonce"] = 'a'
+                }
+                spawn(function()
+                print(request({
+                Url = 'http://127.0.0.1:6463/rpc?v=1',
+                Method = 'POST',
+                Headers = {
+                ['Content-Type'] = 'application/json',
+                ['Origin'] = 'https://discord.com'
+                },
+                Body = game:GetService('HttpService'):JSONEncode(json),
+                }).Body)
+                end)
+                setclipboard("https://discord.gg/fQcSXQXSUp")
+                   ]]
+                   writefile("Chixs.lua", (_G.invite))
+               end
+            end
+            rconsoleclear('s')
+    end)
+    
+    
+    
+    
+    
+    -- Main
+    MainSection:NewButton("100% accuracy", "you just gonna have high accuracy ", function()
+        local mt = getrawmetatable(game)
+    local old = mt.__namecall
+    setreadonly(mt, false)
+    mt.__namecall =
+       newcclosure(
+       function(remote, ...)
+           args = {...}
+           method = tostring(getnamecallmethod())
+           if method == "FireServer" and tostring(remote) == "ServerEvent" and args[1] == "Accuracy" then
+               args[2] = 1
+               return old(remote, unpack(args))
+           end
+           return old(remote, ...)
+       end
+    )
+    setreadonly(mt, true)
+    end)
+    MainSection:NewToggle("AutoKick", "Just an custom AutoFarm Position ;)", function(v)
+        getgenv().AutoKick = v
+        while true do
+            if not getgenv().AutoKick then return end
+            local Players = game:GetService("Players");
+            local Char = Players.LocalPlayer.Character;
+    
+            Char.Ball.ServerEvent:FireServer("Start")
+            wait(0.1)
+        end
+    end)
+    MainSection:NewToggle("AutoBuy", "AutoBuys items", function(v)
+        getgenv().AutoBuy = v
+    
+        while wait do
+            if not getgenv().AutoBuy then return end
+            local ServerEvent = game:GetService("ReplicatedStorage").ServerEvent;
+            local Types = {"White", "Grass", "Wood", "Bronze", "Triangles", "Allstar", "Moon", "Water", "Fire", "Emerald", "Amethyst", "Cloudy", "Money", "Pink Camo", "Gloomy", "Lightning", "Magma", "Galaxy", "Fire & Ice"}
+    
+            for i,v in ipairs(Types) do
+                ServerEvent:FireServer("Buy", "Balls", v)
+                ServerEvent:FireServer("Buy", "Helmets", v)
+                ServerEvent:FireServer("Buy", "Jerseys", v)
+                ServerEvent:FireServer("Buy", "Cleats", v)
+                wait(0.1)
+            end
+        end
+    end)
+    MainSection:NewToggle("AutoRebirth", "It Does what it says it Does", function(state)
+        if state then
+            getgenv().AutoRebirth = true
+    
+            spawn(function()
+                while wait() do
+                    if getgenv().AutoRebirth == true then
+                        local args = {[1] = "Rebirth"}game:GetService("ReplicatedStorage").ServerEvent:FireServer(unpack(args))
+                    end
+                end
+            end)
+        else
+            getgenv().AutoRebirth = false
+    
+            spawn(function()
+                while wait() do
+                    if getgenv().AutoRebirth == true then
+                        local args = {[1] = "Rebirth"}game:GetService("ReplicatedStorage").ServerEvent:FireServer(unpack(args))
+                    end
+                end
+            end)
+        end
+    end)
+    local MainSection = Main:NewSection("Others")
+    MainSection:NewButton("Open Rebirth UI", "💗Chixs💗", function()
+        game.Players.LocalPlayer.PlayerGui.RebirthGui["Frame"].Visible = true
+    end)
+    MainSection:NewButton("Open BallStore UI", "💗Chixs💗", function()
+        game.Players.LocalPlayer.PlayerGui.BallStoreGui["Frame"].Visible = true
+    end)
+    MainSection:NewButton("Open ClothingStore UI", "💗Chixs💗", function()
+        game.Players.LocalPlayer.PlayerGui.ClothingStoreGui["Buttons"].Visible = true
+    end)
+    
+    
+    
+    
+    
+    -- AutoFarm
+    AutoFarmSection:NewToggle("5 Yards AutoFarm", "idk why i added this shit 5 yards", function(state)
+        if state then
+            getgenv().Settings = {
+                Farm = true,
+                Yard = "5",
+                Notification = false
+            }
+            
+            local Character = game:GetService("Players").LocalPlayer.Character
+            local TotalKicks = 0
+            local Yards = {
+                ["5"] = -215,
+                ["10"] = -200,
+                ["15"] = -185,
+                ["20"] = -170,
+                ["25"] = -155,
+                ["30"] = -140,
+                ["35"] = -125,
+                ["40"] = -110,
+                ["45"] = -95,
+                ["50"] = -80,
+                ["55"] = -65,
+                ["60"] = -50,
+                ["65"] = -35,
+                ["70"] = -20,
+                ["75"] = -5,
+                ["80"] = 10,
+                ["85"] = 25,
+                ["90"] = 40,
+                ["95"] = 55,
+                ["100"] = 70,
+            }
+            
+            Character.HumanoidRootPart.CFrame = CFrame.new(Yards[getgenv().Settings.Yard], -6, -470)
+            
+            while wait(3) do
+                if getgenv().Settings.Farm then
+                    Character.Ball.ServerEvent:FireServer("Start")
+                    Character.Ball.ServerEvent:FireServer("Accuracy", 0.9999999999999999999)
+                    TotalKicks = TotalKicks + 1
+                    if getgenv().Settings.Notification then
+                        game:GetService("StarterGui"):SetCore("SendNotification", {
+                            Title = "🏈 Field Goal Simulator", Text = TotalKicks .. " kick/s made.", Duration = 2
+                        })
+                    end
+                else break
+                end
+            end
+        else
+            getgenv().Settings = {
+                Farm = false,
+                Yard = "5",
+                Notification = false
+            }
+            
+            local Character = game:GetService("Players").LocalPlayer.Character
+            local TotalKicks = 0
+            local Yards = {
+                ["5"] = -215,
+                ["10"] = -200,
+                ["15"] = -185,
+                ["20"] = -170,
+                ["25"] = -155,
+                ["30"] = -140,
+                ["35"] = -125,
+                ["40"] = -110,
+                ["45"] = -95,
+                ["50"] = -80,
+                ["55"] = -65,
+                ["60"] = -50,
+                ["65"] = -35,
+                ["70"] = -20,
+                ["75"] = -5,
+                ["80"] = 10,
+                ["85"] = 25,
+                ["90"] = 40,
+                ["95"] = 55,
+                ["100"] = 70,
+            }
+            
+            Character.HumanoidRootPart.CFrame = CFrame.new(Yards[getgenv().Settings.Yard], -6, -470)
+            
+            while wait(3) do
+                if getgenv().Settings.Farm then
+                    Character.Ball.ServerEvent:FireServer("Start")
+                    Character.Ball.ServerEvent:FireServer("Accuracy", 0.9999999999999999999)
+                    TotalKicks = TotalKicks + 1
+                    if getgenv().Settings.Notification then
+                        game:GetService("StarterGui"):SetCore("SendNotification", {
+                            Title = "🏈 Field Goal Simulator", Text = TotalKicks .. " kick/s made.", Duration = 2
+                        })
+                    end
+                else break
+                end
+            end
+        end
+    end)
+    AutoFarmSection:NewToggle("10 Yards AutoFarm", "idk why am tired making these dog shit script so sorry if fucking dumb as", function(state)
+        if state then
+            getgenv().Settings = {
+                Farm = false,
+                Yard = "10",
+                Notification = false
+            }
+            
+            local Character = game:GetService("Players").LocalPlayer.Character
+            local TotalKicks = 0
+            local Yards = {
+                ["5"] = -215,
+                ["10"] = -200,
+                ["15"] = -185,
+                ["20"] = -170,
+                ["25"] = -155,
+                ["30"] = -140,
+                ["35"] = -125,
+                ["40"] = -110,
+                ["45"] = -95,
+                ["50"] = -80,
+                ["55"] = -65,
+                ["60"] = -50,
+                ["65"] = -35,
+                ["70"] = -20,
+                ["75"] = -5,
+                ["80"] = 10,
+                ["85"] = 25,
+                ["90"] = 40,
+                ["95"] = 55,
+                ["100"] = 70,
+            }
+            
+            Character.HumanoidRootPart.CFrame = CFrame.new(Yards[getgenv().Settings.Yard], -6, -470)
+            
+            while wait(3) do
+                if getgenv().Settings.Farm then
+                    Character.Ball.ServerEvent:FireServer("Start")
+                    Character.Ball.ServerEvent:FireServer("Accuracy", 0.9999999999999999999)
+                    TotalKicks = TotalKicks + 1
+                    if getgenv().Settings.Notification then
+                        game:GetService("StarterGui"):SetCore("SendNotification", {
+                            Title = "🏈 Field Goal Simulator", Text = TotalKicks .. " kick/s made.", Duration = 2
+                        })
+                    end
+                else break
+                end
+            end
+        else
+            getgenv().Settings = {
+                Farm = true,
+                Yard = "10",
+                Notification = false
+            }
+            
+            local Character = game:GetService("Players").LocalPlayer.Character
+            local TotalKicks = 0
+            local Yards = {
+                ["5"] = -215,
+                ["10"] = -200,
+                ["15"] = -185,
+                ["20"] = -170,
+                ["25"] = -155,
+                ["30"] = -140,
+                ["35"] = -125,
+                ["40"] = -110,
+                ["45"] = -95,
+                ["50"] = -80,
+                ["55"] = -65,
+                ["60"] = -50,
+                ["65"] = -35,
+                ["70"] = -20,
+                ["75"] = -5,
+                ["80"] = 10,
+                ["85"] = 25,
+                ["90"] = 40,
+                ["95"] = 55,
+                ["100"] = 70,
+            }
+            
+            Character.HumanoidRootPart.CFrame = CFrame.new(Yards[getgenv().Settings.Yard], -6, -470)
+            
+            while wait(3) do
+                if getgenv().Settings.Farm then
+                    Character.Ball.ServerEvent:FireServer("Start")
+                    Character.Ball.ServerEvent:FireServer("Accuracy", 0.9999999999999999999)
+                    TotalKicks = TotalKicks + 1
+                    if getgenv().Settings.Notification then
+                        game:GetService("StarterGui"):SetCore("SendNotification", {
+                            Title = "🏈 Field Goal Simulator", Text = TotalKicks .. " kick/s made.", Duration = 2
+                        })
+                    end
+                else break
+                end
+            end
+        end
+    end)
+    AutoFarmSection:NewToggle("15 Yards AutoFarm", "Dude am tired as fuck", function(v)
+        getgenv().Settings = {
+            Farm = v,
+            Yard = "15",
+            Notification = false
+        }
+        
+        local Character = game:GetService("Players").LocalPlayer.Character
+        local TotalKicks = 0
+        local Yards = {
+            ["5"] = -215,
+            ["10"] = -200,
+            ["15"] = -185,
+            ["20"] = -170,
+            ["25"] = -155,
+            ["30"] = -140,
+            ["35"] = -125,
+            ["40"] = -110,
+            ["45"] = -95,
+            ["50"] = -80,
+            ["55"] = -65,
+            ["60"] = -50,
+            ["65"] = -35,
+            ["70"] = -20,
+            ["75"] = -5,
+            ["80"] = 10,
+            ["85"] = 25,
+            ["90"] = 40,
+            ["95"] = 55,
+            ["100"] = 70,
+        }
+        
+        Character.HumanoidRootPart.CFrame = CFrame.new(Yards[getgenv().Settings.Yard], -6, -470)
+        
+        while wait(3) do
+            if getgenv().Settings.Farm then
+                Character.Ball.ServerEvent:FireServer("Start")
+                Character.Ball.ServerEvent:FireServer("Accuracy", 0.9999999999999999999)
+                TotalKicks = TotalKicks + 1
+                if getgenv().Settings.Notification then
+                    game:GetService("StarterGui"):SetCore("SendNotification", {
+                        Title = "🏈 Field Goal Simulator", Text = TotalKicks .. " kick/s made.", Duration = 2
+                    })
+                end
+            else break
+            end
+        end
+    end)
+    AutoFarmSection:NewToggle("20 Yards AutoFarm", "20 lol", function(v)
+        getgenv().Settings = {
+            Farm = v,
+            Yard = "20",
+            Notification = false
+        }
+        
+        local Character = game:GetService("Players").LocalPlayer.Character
+        local TotalKicks = 0
+        local Yards = {
+            ["5"] = -215,
+            ["10"] = -200,
+            ["15"] = -185,
+            ["20"] = -170,
+            ["25"] = -155,
+            ["30"] = -140,
+            ["35"] = -125,
+            ["40"] = -110,
+            ["45"] = -95,
+            ["50"] = -80,
+            ["55"] = -65,
+            ["60"] = -50,
+            ["65"] = -35,
+            ["70"] = -20,
+            ["75"] = -5,
+            ["80"] = 10,
+            ["85"] = 25,
+            ["90"] = 40,
+            ["95"] = 55,
+            ["100"] = 70,
+        }
+        
+        Character.HumanoidRootPart.CFrame = CFrame.new(Yards[getgenv().Settings.Yard], -6, -470)
+        
+        while wait(3) do
+            if getgenv().Settings.Farm then
+                Character.Ball.ServerEvent:FireServer("Start")
+                Character.Ball.ServerEvent:FireServer("Accuracy", 0.9999999999999999999)
+                TotalKicks = TotalKicks + 1
+                if getgenv().Settings.Notification then
+                    game:GetService("StarterGui"):SetCore("SendNotification", {
+                        Title = "🏈 Field Goal Simulator", Text = TotalKicks .. " kick/s made.", Duration = 2
+                    })
+                end
+            else break
+            end
+        end
+    end)
+    AutoFarmSection:NewToggle("25 Yards AutoFarm", "25 lol", function(v)
+        getgenv().Settings = {
+            Farm = v,
+            Yard = "25",
+            Notification = false
+        }
+        
+        local Character = game:GetService("Players").LocalPlayer.Character
+        local TotalKicks = 0
+        local Yards = {
+            ["5"] = -215,
+            ["10"] = -200,
+            ["15"] = -185,
+            ["20"] = -170,
+            ["25"] = -155,
+            ["30"] = -140,
+            ["35"] = -125,
+            ["40"] = -110,
+            ["45"] = -95,
+            ["50"] = -80,
+            ["55"] = -65,
+            ["60"] = -50,
+            ["65"] = -35,
+            ["70"] = -20,
+            ["75"] = -5,
+            ["80"] = 10,
+            ["85"] = 25,
+            ["90"] = 40,
+            ["95"] = 55,
+            ["100"] = 70,
+        }
+        
+        Character.HumanoidRootPart.CFrame = CFrame.new(Yards[getgenv().Settings.Yard], -6, -470)
+        
+        while wait(3) do
+            if getgenv().Settings.Farm then
+                Character.Ball.ServerEvent:FireServer("Start")
+                Character.Ball.ServerEvent:FireServer("Accuracy", 0.9999999999999999999)
+                TotalKicks = TotalKicks + 1
+                if getgenv().Settings.Notification then
+                    game:GetService("StarterGui"):SetCore("SendNotification", {
+                        Title = "🏈 Field Goal Simulator", Text = TotalKicks .. " kick/s made.", Duration = 2
+                    })
+                end
+            else break
+            end
+        end
+    end)
+    AutoFarmSection:NewToggle("30 Yards AutoFarm", "Dude am tired as fuck", function(v)
+        getgenv().Settings = {
+            Farm = v,
+            Yard = "30",
+            Notification = false
+        }
+        
+        local Character = game:GetService("Players").LocalPlayer.Character
+        local TotalKicks = 0
+        local Yards = {
+            ["5"] = -215,
+            ["10"] = -200,
+            ["15"] = -185,
+            ["20"] = -170,
+            ["25"] = -155,
+            ["30"] = -140,
+            ["35"] = -125,
+            ["40"] = -110,
+            ["45"] = -95,
+            ["50"] = -80,
+            ["55"] = -65,
+            ["60"] = -50,
+            ["65"] = -35,
+            ["70"] = -20,
+            ["75"] = -5,
+            ["80"] = 10,
+            ["85"] = 25,
+            ["90"] = 40,
+            ["95"] = 55,
+            ["100"] = 70,
+        }
+        
+        Character.HumanoidRootPart.CFrame = CFrame.new(Yards[getgenv().Settings.Yard], -6, -470)
+        
+        while wait(3) do
+            if getgenv().Settings.Farm then
+                Character.Ball.ServerEvent:FireServer("Start")
+                Character.Ball.ServerEvent:FireServer("Accuracy", 0.9999999999999999999)
+                TotalKicks = TotalKicks + 1
+                if getgenv().Settings.Notification then
+                    game:GetService("StarterGui"):SetCore("SendNotification", {
+                        Title = "🏈 Field Goal Simulator", Text = TotalKicks .. " kick/s made.", Duration = 2
+                    })
+                end
+            else break
+            end
+        end
+    end)
+    AutoFarmSection:NewToggle("35 Yards AutoFarm", "Dude am tired as fuck", function(v)
+        getgenv().Settings = {
+            Farm = v,
+            Yard = "35",
+            Notification = false
+        }
+        
+        local Character = game:GetService("Players").LocalPlayer.Character
+        local TotalKicks = 0
+        local Yards = {
+            ["5"] = -215,
+            ["10"] = -200,
+            ["15"] = -185,
+            ["20"] = -170,
+            ["25"] = -155,
+            ["30"] = -140,
+            ["35"] = -125,
+            ["40"] = -110,
+            ["45"] = -95,
+            ["50"] = -80,
+            ["55"] = -65,
+            ["60"] = -50,
+            ["65"] = -35,
+            ["70"] = -20,
+            ["75"] = -5,
+            ["80"] = 10,
+            ["85"] = 25,
+            ["90"] = 40,
+            ["95"] = 55,
+            ["100"] = 70,
+        }
+        
+        Character.HumanoidRootPart.CFrame = CFrame.new(Yards[getgenv().Settings.Yard], -6, -470)
+        
+        while wait(3) do
+            if getgenv().Settings.Farm then
+                Character.Ball.ServerEvent:FireServer("Start")
+                Character.Ball.ServerEvent:FireServer("Accuracy", 0.9999999999999999999)
+                TotalKicks = TotalKicks + 1
+                if getgenv().Settings.Notification then
+                    game:GetService("StarterGui"):SetCore("SendNotification", {
+                        Title = "🏈 Field Goal Simulator", Text = TotalKicks .. " kick/s made.", Duration = 2
+                    })
+                end
+            else break
+            end
+        end
+    end)
+    AutoFarmSection:NewToggle("40 Yards AutoFarm", "Dude am tired as fuck", function(v)
+        getgenv().Settings = {
+            Farm = v,
+            Yard = "40",
+            Notification = false
+        }
+        
+        local Character = game:GetService("Players").LocalPlayer.Character
+        local TotalKicks = 0
+        local Yards = {
+            ["5"] = -215,
+            ["10"] = -200,
+            ["15"] = -185,
+            ["20"] = -170,
+            ["25"] = -155,
+            ["30"] = -140,
+            ["35"] = -125,
+            ["40"] = -110,
+            ["45"] = -95,
+            ["50"] = -80,
+            ["55"] = -65,
+            ["60"] = -50,
+            ["65"] = -35,
+            ["70"] = -20,
+            ["75"] = -5,
+            ["80"] = 10,
+            ["85"] = 25,
+            ["90"] = 40,
+            ["95"] = 55,
+            ["100"] = 70,
+        }
+        
+        Character.HumanoidRootPart.CFrame = CFrame.new(Yards[getgenv().Settings.Yard], -6, -470)
+        
+        while wait(3) do
+            if getgenv().Settings.Farm then
+                Character.Ball.ServerEvent:FireServer("Start")
+                Character.Ball.ServerEvent:FireServer("Accuracy", 0.9999999999999999999)
+                TotalKicks = TotalKicks + 1
+                if getgenv().Settings.Notification then
+                    game:GetService("StarterGui"):SetCore("SendNotification", {
+                        Title = "🏈 Field Goal Simulator", Text = TotalKicks .. " kick/s made.", Duration = 2
+                    })
+                end
+            else break
+            end
+        end
+    end)
+    AutoFarmSection:NewToggle("45 Yards AutoFarm", "Dude am tired as fuck", function(v)
+        getgenv().Settings = {
+            Farm = v,
+            Yard = "45",
+            Notification = false
+        }
+        
+        local Character = game:GetService("Players").LocalPlayer.Character
+        local TotalKicks = 0
+        local Yards = {
+            ["5"] = -215,
+            ["10"] = -200,
+            ["15"] = -185,
+            ["20"] = -170,
+            ["25"] = -155,
+            ["30"] = -140,
+            ["35"] = -125,
+            ["40"] = -110,
+            ["45"] = -95,
+            ["50"] = -80,
+            ["55"] = -65,
+            ["60"] = -50,
+            ["65"] = -35,
+            ["70"] = -20,
+            ["75"] = -5,
+            ["80"] = 10,
+            ["85"] = 25,
+            ["90"] = 40,
+            ["95"] = 55,
+            ["100"] = 70,
+        }
+        
+        Character.HumanoidRootPart.CFrame = CFrame.new(Yards[getgenv().Settings.Yard], -6, -470)
+        
+        while wait(3) do
+            if getgenv().Settings.Farm then
+                Character.Ball.ServerEvent:FireServer("Start")
+                Character.Ball.ServerEvent:FireServer("Accuracy", 0.9999999999999999999)
+                TotalKicks = TotalKicks + 1
+                if getgenv().Settings.Notification then
+                    game:GetService("StarterGui"):SetCore("SendNotification", {
+                        Title = "🏈 Field Goal Simulator", Text = TotalKicks .. " kick/s made.", Duration = 2
+                    })
+                end
+            else break
+            end
+        end
+    end)
+    AutoFarmSection:NewToggle("50 Yards AutoFarm", "Dude am tired as fuck", function(v)
+        getgenv().Settings = {
+            Farm = v,
+            Yard = "50",
+            Notification = false
+        }
+        
+        local Character = game:GetService("Players").LocalPlayer.Character
+        local TotalKicks = 0
+        local Yards = {
+            ["5"] = -215,
+            ["10"] = -200,
+            ["15"] = -185,
+            ["20"] = -170,
+            ["25"] = -155,
+            ["30"] = -140,
+            ["35"] = -125,
+            ["40"] = -110,
+            ["45"] = -95,
+            ["50"] = -80,
+            ["55"] = -65,
+            ["60"] = -50,
+            ["65"] = -35,
+            ["70"] = -20,
+            ["75"] = -5,
+            ["80"] = 10,
+            ["85"] = 25,
+            ["90"] = 40,
+            ["95"] = 55,
+            ["100"] = 70,
+        }
+        
+        Character.HumanoidRootPart.CFrame = CFrame.new(Yards[getgenv().Settings.Yard], -6, -470)
+        
+        while wait(3) do
+            if getgenv().Settings.Farm then
+                Character.Ball.ServerEvent:FireServer("Start")
+                Character.Ball.ServerEvent:FireServer("Accuracy", 0.9999999999999999999)
+                TotalKicks = TotalKicks + 1
+                if getgenv().Settings.Notification then
+                    game:GetService("StarterGui"):SetCore("SendNotification", {
+                        Title = "🏈 Field Goal Simulator", Text = TotalKicks .. " kick/s made.", Duration = 2
+                    })
+                end
+            else break
+            end
+        end
+    end)
+    AutoFarmSection:NewToggle("55 Yards AutoFarm", "Dude am tired as fuck", function(v)
+        getgenv().Settings = {
+            Farm = v,
+            Yard = "55",
+            Notification = false
+        }
+        
+        local Character = game:GetService("Players").LocalPlayer.Character
+        local TotalKicks = 0
+        local Yards = {
+            ["5"] = -215,
+            ["10"] = -200,
+            ["15"] = -185,
+            ["20"] = -170,
+            ["25"] = -155,
+            ["30"] = -140,
+            ["35"] = -125,
+            ["40"] = -110,
+            ["45"] = -95,
+            ["50"] = -80,
+            ["55"] = -65,
+            ["60"] = -50,
+            ["65"] = -35,
+            ["70"] = -20,
+            ["75"] = -5,
+            ["80"] = 10,
+            ["85"] = 25,
+            ["90"] = 40,
+            ["95"] = 55,
+            ["100"] = 70,
+        }
+        
+        Character.HumanoidRootPart.CFrame = CFrame.new(Yards[getgenv().Settings.Yard], -6, -470)
+        
+        while wait(3) do
+            if getgenv().Settings.Farm then
+                Character.Ball.ServerEvent:FireServer("Start")
+                Character.Ball.ServerEvent:FireServer("Accuracy", 0.9999999999999999999)
+                TotalKicks = TotalKicks + 1
+                if getgenv().Settings.Notification then
+                    game:GetService("StarterGui"):SetCore("SendNotification", {
+                        Title = "🏈 Field Goal Simulator", Text = TotalKicks .. " kick/s made.", Duration = 2
+                    })
+                end
+            else break
+            end
+        end
+    end)
+    AutoFarmSection:NewToggle("60 Yards AutoFarm", "Dude am tired as fuck", function(v)
+        getgenv().Settings = {
+            Farm = v,
+            Yard = "60",
+            Notification = false
+        }
+        
+        local Character = game:GetService("Players").LocalPlayer.Character
+        local TotalKicks = 0
+        local Yards = {
+            ["5"] = -215,
+            ["10"] = -200,
+            ["15"] = -185,
+            ["20"] = -170,
+            ["25"] = -155,
+            ["30"] = -140,
+            ["35"] = -125,
+            ["40"] = -110,
+            ["45"] = -95,
+            ["50"] = -80,
+            ["55"] = -65,
+            ["60"] = -50,
+            ["65"] = -35,
+            ["70"] = -20,
+            ["75"] = -5,
+            ["80"] = 10,
+            ["85"] = 25,
+            ["90"] = 40,
+            ["95"] = 55,
+            ["100"] = 70,
+        }
+        
+        Character.HumanoidRootPart.CFrame = CFrame.new(Yards[getgenv().Settings.Yard], -6, -470)
+        
+        while wait(3) do
+            if getgenv().Settings.Farm then
+                Character.Ball.ServerEvent:FireServer("Start")
+                Character.Ball.ServerEvent:FireServer("Accuracy", 0.9999999999999999999)
+                TotalKicks = TotalKicks + 1
+                if getgenv().Settings.Notification then
+                    game:GetService("StarterGui"):SetCore("SendNotification", {
+                        Title = "🏈 Field Goal Simulator", Text = TotalKicks .. " kick/s made.", Duration = 2
+                    })
+                end
+            else break
+            end
+        end
+    end)
+    AutoFarmSection:NewToggle("65 Yards AutoFarm", "Dude am tired as fuck", function(v)
+        getgenv().Settings = {
+            Farm = v,
+            Yard = "65",
+            Notification = false
+        }
+        
+        local Character = game:GetService("Players").LocalPlayer.Character
+        local TotalKicks = 0
+        local Yards = {
+            ["5"] = -215,
+            ["10"] = -200,
+            ["15"] = -185,
+            ["20"] = -170,
+            ["25"] = -155,
+            ["30"] = -140,
+            ["35"] = -125,
+            ["40"] = -110,
+            ["45"] = -95,
+            ["50"] = -80,
+            ["55"] = -65,
+            ["60"] = -50,
+            ["65"] = -35,
+            ["70"] = -20,
+            ["75"] = -5,
+            ["80"] = 10,
+            ["85"] = 25,
+            ["90"] = 40,
+            ["95"] = 55,
+            ["100"] = 70,
+        }
+        
+        Character.HumanoidRootPart.CFrame = CFrame.new(Yards[getgenv().Settings.Yard], -6, -470)
+        
+        while wait(3) do
+            if getgenv().Settings.Farm then
+                Character.Ball.ServerEvent:FireServer("Start")
+                Character.Ball.ServerEvent:FireServer("Accuracy", 0.9999999999999999999)
+                TotalKicks = TotalKicks + 1
+                if getgenv().Settings.Notification then
+                    game:GetService("StarterGui"):SetCore("SendNotification", {
+                        Title = "🏈 Field Goal Simulator", Text = TotalKicks .. " kick/s made.", Duration = 2
+                    })
+                end
+            else break
+            end
+        end
+    end)
+    AutoFarmSection:NewToggle("70 Yards AutoFarm", "Dude am tired as fuck", function(v)
+        getgenv().Settings = {
+            Farm = v,
+            Yard = "70",
+            Notification = false
+        }
+        
+        local Character = game:GetService("Players").LocalPlayer.Character
+        local TotalKicks = 0
+        local Yards = {
+            ["5"] = -215,
+            ["10"] = -200,
+            ["15"] = -185,
+            ["20"] = -170,
+            ["25"] = -155,
+            ["30"] = -140,
+            ["35"] = -125,
+            ["40"] = -110,
+            ["45"] = -95,
+            ["50"] = -80,
+            ["55"] = -65,
+            ["60"] = -50,
+            ["65"] = -35,
+            ["70"] = -20,
+            ["75"] = -5,
+            ["80"] = 10,
+            ["85"] = 25,
+            ["90"] = 40,
+            ["95"] = 55,
+            ["100"] = 70,
+        }
+        
+        Character.HumanoidRootPart.CFrame = CFrame.new(Yards[getgenv().Settings.Yard], -6, -470)
+        
+        while wait(3) do
+            if getgenv().Settings.Farm then
+                Character.Ball.ServerEvent:FireServer("Start")
+                Character.Ball.ServerEvent:FireServer("Accuracy", 0.9999999999999999999)
+                TotalKicks = TotalKicks + 1
+                if getgenv().Settings.Notification then
+                    game:GetService("StarterGui"):SetCore("SendNotification", {
+                        Title = "🏈 Field Goal Simulator", Text = TotalKicks .. " kick/s made.", Duration = 2
+                    })
+                end
+            else break
+            end
+        end
+    end)
+    AutoFarmSection:NewToggle("75 Yards AutoFarm", "Dude am tired as fuck", function(v)
+        getgenv().Settings = {
+            Farm = v,
+            Yard = "75",
+            Notification = false
+        }
+        
+        local Character = game:GetService("Players").LocalPlayer.Character
+        local TotalKicks = 0
+        local Yards = {
+            ["5"] = -215,
+            ["10"] = -200,
+            ["15"] = -185,
+            ["20"] = -170,
+            ["25"] = -155,
+            ["30"] = -140,
+            ["35"] = -125,
+            ["40"] = -110,
+            ["45"] = -95,
+            ["50"] = -80,
+            ["55"] = -65,
+            ["60"] = -50,
+            ["65"] = -35,
+            ["70"] = -20,
+            ["75"] = -5,
+            ["80"] = 10,
+            ["85"] = 25,
+            ["90"] = 40,
+            ["95"] = 55,
+            ["100"] = 70,
+        }
+        
+        Character.HumanoidRootPart.CFrame = CFrame.new(Yards[getgenv().Settings.Yard], -6, -470)
+        
+        while wait(3) do
+            if getgenv().Settings.Farm then
+                Character.Ball.ServerEvent:FireServer("Start")
+                Character.Ball.ServerEvent:FireServer("Accuracy", 0.9999999999999999999)
+                TotalKicks = TotalKicks + 1
+                if getgenv().Settings.Notification then
+                    game:GetService("StarterGui"):SetCore("SendNotification", {
+                        Title = "🏈 Field Goal Simulator", Text = TotalKicks .. " kick/s made.", Duration = 2
+                    })
+                end
+            else break
+            end
+        end
+    end)
+    AutoFarmSection:NewToggle("80 Yards AutoFarm", "Dude am tired as fuck", function(v)
+        getgenv().Settings = {
+            Farm = v,
+            Yard = "80",
+            Notification = false
+        }
+        
+        local Character = game:GetService("Players").LocalPlayer.Character
+        local TotalKicks = 0
+        local Yards = {
+            ["5"] = -215,
+            ["10"] = -200,
+            ["15"] = -185,
+            ["20"] = -170,
+            ["25"] = -155,
+            ["30"] = -140,
+            ["35"] = -125,
+            ["40"] = -110,
+            ["45"] = -95,
+            ["50"] = -80,
+            ["55"] = -65,
+            ["60"] = -50,
+            ["65"] = -35,
+            ["70"] = -20,
+            ["75"] = -5,
+            ["80"] = 10,
+            ["85"] = 25,
+            ["90"] = 40,
+            ["95"] = 55,
+            ["100"] = 70,
+        }
+        
+        Character.HumanoidRootPart.CFrame = CFrame.new(Yards[getgenv().Settings.Yard], -6, -470)
+        
+        while wait(3) do
+            if getgenv().Settings.Farm then
+                Character.Ball.ServerEvent:FireServer("Start")
+                Character.Ball.ServerEvent:FireServer("Accuracy", 0.9999999999999999999)
+                TotalKicks = TotalKicks + 1
+                if getgenv().Settings.Notification then
+                    game:GetService("StarterGui"):SetCore("SendNotification", {
+                        Title = "🏈 Field Goal Simulator", Text = TotalKicks .. " kick/s made.", Duration = 2
+                    })
+                end
+            else break
+            end
+        end
+    end)
+    AutoFarmSection:NewToggle("85 Yards AutoFarm", "Dude am tired as fuck", function(v)
+        getgenv().Settings = {
+            Farm = v,
+            Yard = "85",
+            Notification = false
+        }
+        
+        local Character = game:GetService("Players").LocalPlayer.Character
+        local TotalKicks = 0
+        local Yards = {
+            ["5"] = -215,
+            ["10"] = -200,
+            ["15"] = -185,
+            ["20"] = -170,
+            ["25"] = -155,
+            ["30"] = -140,
+            ["35"] = -125,
+            ["40"] = -110,
+            ["45"] = -95,
+            ["50"] = -80,
+            ["55"] = -65,
+            ["60"] = -50,
+            ["65"] = -35,
+            ["70"] = -20,
+            ["75"] = -5,
+            ["80"] = 10,
+            ["85"] = 25,
+            ["90"] = 40,
+            ["95"] = 55,
+            ["100"] = 70,
+        }
+        
+        Character.HumanoidRootPart.CFrame = CFrame.new(Yards[getgenv().Settings.Yard], -6, -470)
+        
+        while wait(3) do
+            if getgenv().Settings.Farm then
+                Character.Ball.ServerEvent:FireServer("Start")
+                Character.Ball.ServerEvent:FireServer("Accuracy", 0.9999999999999999999)
+                TotalKicks = TotalKicks + 1
+                if getgenv().Settings.Notification then
+                    game:GetService("StarterGui"):SetCore("SendNotification", {
+                        Title = "🏈 Field Goal Simulator", Text = TotalKicks .. " kick/s made.", Duration = 2
+                    })
+                end
+            else break
+            end
+        end
+    end)
+    AutoFarmSection:NewToggle("90 Yards AutoFarm", "Dude am tired as fuck", function(v)
+        getgenv().Settings = {
+            Farm = v,
+            Yard = "90",
+            Notification = false
+        }
+        
+        local Character = game:GetService("Players").LocalPlayer.Character
+        local TotalKicks = 0
+        local Yards = {
+            ["5"] = -215,
+            ["10"] = -200,
+            ["15"] = -185,
+            ["20"] = -170,
+            ["25"] = -155,
+            ["30"] = -140,
+            ["35"] = -125,
+            ["40"] = -110,
+            ["45"] = -95,
+            ["50"] = -80,
+            ["55"] = -65,
+            ["60"] = -50,
+            ["65"] = -35,
+            ["70"] = -20,
+            ["75"] = -5,
+            ["80"] = 10,
+            ["85"] = 25,
+            ["90"] = 40,
+            ["95"] = 55,
+            ["100"] = 70,
+        }
+        
+        Character.HumanoidRootPart.CFrame = CFrame.new(Yards[getgenv().Settings.Yard], -6, -470)
+        
+        while wait(3) do
+            if getgenv().Settings.Farm then
+                Character.Ball.ServerEvent:FireServer("Start")
+                Character.Ball.ServerEvent:FireServer("Accuracy", 0.9999999999999999999)
+                TotalKicks = TotalKicks + 1
+                if getgenv().Settings.Notification then
+                    game:GetService("StarterGui"):SetCore("SendNotification", {
+                        Title = "🏈 Field Goal Simulator", Text = TotalKicks .. " kick/s made.", Duration = 2
+                    })
+                end
+            else break
+            end
+        end
+    end)
+    AutoFarmSection:NewToggle("95 Yards AutoFarm", "Dude am tired as fuck", function(v)
+        getgenv().Settings = {
+            Farm = v,
+            Yard = "95",
+            Notification = false
+        }
+        
+        local Character = game:GetService("Players").LocalPlayer.Character
+        local TotalKicks = 0
+        local Yards = {
+            ["5"] = -215,
+            ["10"] = -200,
+            ["15"] = -185,
+            ["20"] = -170,
+            ["25"] = -155,
+            ["30"] = -140,
+            ["35"] = -125,
+            ["40"] = -110,
+            ["45"] = -95,
+            ["50"] = -80,
+            ["55"] = -65,
+            ["60"] = -50,
+            ["65"] = -35,
+            ["70"] = -20,
+            ["75"] = -5,
+            ["80"] = 10,
+            ["85"] = 25,
+            ["90"] = 40,
+            ["95"] = 55,
+            ["100"] = 70,
+        }
+        
+        Character.HumanoidRootPart.CFrame = CFrame.new(Yards[getgenv().Settings.Yard], -6, -470)
+        
+        while wait(3) do
+            if getgenv().Settings.Farm then
+                Character.Ball.ServerEvent:FireServer("Start")
+                Character.Ball.ServerEvent:FireServer("Accuracy", 0.9999999999999999999)
+                TotalKicks = TotalKicks + 1
+                if getgenv().Settings.Notification then
+                    game:GetService("StarterGui"):SetCore("SendNotification", {
+                        Title = "🏈 Field Goal Simulator", Text = TotalKicks .. " kick/s made.", Duration = 2
+                    })
+                end
+            else break
+            end
+        end
+    end)
+    AutoFarmSection:NewToggle("100 Yards AutoFarm", "Dude am tired as fuck", function(v)
+        getgenv().Settings = {
+            Farm = v,
+            Yard = "100",
+            Notification = false
+        }
+        
+        local Character = game:GetService("Players").LocalPlayer.Character
+        local TotalKicks = 0
+        local Yards = {
+            ["5"] = -215,
+            ["10"] = -200,
+            ["15"] = -185,
+            ["20"] = -170,
+            ["25"] = -155,
+            ["30"] = -140,
+            ["35"] = -125,
+            ["40"] = -110,
+            ["45"] = -95,
+            ["50"] = -80,
+            ["55"] = -65,
+            ["60"] = -50,
+            ["65"] = -35,
+            ["70"] = -20,
+            ["75"] = -5,
+            ["80"] = 10,
+            ["85"] = 25,
+            ["90"] = 40,
+            ["95"] = 55,
+            ["100"] = 70,
+        }
+        
+        Character.HumanoidRootPart.CFrame = CFrame.new(Yards[getgenv().Settings.Yard], -6, -470)
+        
+        while wait(3) do
+            if getgenv().Settings.Farm then
+                Character.Ball.ServerEvent:FireServer("Start")
+                Character.Ball.ServerEvent:FireServer("Accuracy", 0.9999999999999999999)
+                TotalKicks = TotalKicks + 1
+                if getgenv().Settings.Notification then
+                    game:GetService("StarterGui"):SetCore("SendNotification", {
+                        Title = " Field Goal Simulator", Text = TotalKicks .. " kick/s made.", Duration = 2
+                    })
+                end
+            else break
+            end
+        end
+    end)
+    
+    -- Credit
+    local Credit = Window:NewTab("Credit")
+    local CreditSection = Credit:NewSection("Credit")
+    CreditSection:NewLabel("            Thanks to Real_greggperry56#8963")
+    CreditSection:NewLabel("                For the AutoBuy and AutoKick")
+    CreditSection:NewLabel("                       Thanks to Mods#0001")
+    CreditSection:NewLabel("                       For the 100% accuracy")
+    CreditSection:NewLabel("                        Thanks to Chixs#9092")
+    CreditSection:NewLabel("                            and thats me ;-;")
+    
+    -- Settings
+    local Settings = Window:NewTab("Settings")
+    local SettingsSection = Settings:NewSection("Settings")
+    SettingsSection:NewKeybind("UI Keybind", "Close The UI with Keybinds", Enum.KeyCode.RightShift, function()
+        Library:ToggleUI()
+    end)
+else
+    local LoadingScreen = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Title = Instance.new("TextLabel")
+local TextLabel = Instance.new("TextLabel")
+local Bar = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local Inside = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local E = Instance.new("Frame")
+local UICorner_4 = Instance.new("UICorner")
+
+--Properties:
+
+LoadingScreen.Name = "Loading Screen"
+LoadingScreen.Parent = game.CoreGui
+LoadingScreen.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+LoadingScreen.ResetOnSpawn = false
+
+Frame.Parent = LoadingScreen
+Frame.BackgroundColor3 = Color3.fromRGB(18, 20, 23)
+Frame.Position = UDim2.new(0.367160767, 0, 0.402578801, 0)
+Frame.Size = UDim2.new(0.264538199, 0, 0.194842413, 0)
+
+UICorner.Parent = Frame
+
+Title.Name = "Title"
+Title.Parent = Frame
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(0.0182889588, 0, 0, 0)
+Title.Size = UDim2.new(0.393678159, 0, 0.198529407, 0)
+Title.Font = Enum.Font.SourceSansSemibold
+Title.Text = "Chixs Hub Loader"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 24.000
+Title.TextWrapped = true
+Title.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.0585188605, 0, 0.260454297, 0)
+TextLabel.Size = UDim2.new(0.890804589, 0, 0.242647052, 0)
+TextLabel.Font = Enum.Font.SourceSansSemibold
+TextLabel.Text = "Checking if game Supported..."
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 25.000
+TextLabel.TextWrapped = true
+
+Bar.Name = "Bar"
+Bar.Parent = Frame
+Bar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Bar.Position = UDim2.new(0.026580615, 0, 0.598065794, 0)
+Bar.Size = UDim2.new(0.945402324, 0, 0.191176474, 0)
+
+UICorner_2.CornerRadius = UDim.new(0, 3)
+UICorner_2.Parent = Bar
+
+Inside.Name = "Inside"
+Inside.Parent = Bar
+Inside.BackgroundColor3 = Color3.fromRGB(85, 255, 127)
+Inside.Size = UDim2.new(0, 0, 1, 0)
+
+UICorner_3.CornerRadius = UDim.new(0, 3)
+UICorner_3.Parent = Inside
+
+E.Name = "E"
+E.Parent = Frame
+E.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+E.BorderSizePixel = 0
+E.Position = UDim2.new(0.0155988811, 0, 0.181817025, 0)
+E.Size = UDim2.new(0.968390822, 0, 0.0147058824, 0)
+
+UICorner_4.CornerRadius = UDim.new(0, 20)
+UICorner_4.Parent = E
+
+-- Scripts:
+
+local function DTBNJ_fake_script() -- LoadingScreen.LocalScript 
+    local script = Instance.new('LocalScript', LoadingScreen)
+
+    -- Variables.
+    local frame = script.Parent.Frame
+    local bar = frame.Bar
+    local inside = bar.Inside
+    
+    local player = game.Players.LocalPlayer
+    
+    -- Functions.
+    local function ResizeBar(percent)
+        inside:TweenSize(UDim2.new(percent/100, 0, 1, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Linear, 1, true)
+        wait(1)
+    end
+    
+    -- Start loading.
+    frame.Visible = true
+    
+    -- sizes
+    frame.TextLabel.Text = "Checking if game is supported."
+    ResizeBar(0)
+    frame.TextLabel.Text = "Checking if game is supported.."
+    ResizeBar(10)
+    frame.TextLabel.Text = "Checking if game is supported..."
+    ResizeBar(20)
+    frame.TextLabel.Text = "Checking if game is supported."
+    ResizeBar(30)
+    frame.TextLabel.Text = "Checking if game is supported.."
+    ResizeBar(40)
+    frame.TextLabel.Text = "Checking if user Whitelisted..."
+    ResizeBar(50)
+    frame.TextLabel.Text = "Checking if user Whitelisted."
+    ResizeBar(50)
+    frame.TextLabel.Text = "Checking if user Whitelisted.."
+    ResizeBar(50)
+    frame.TextLabel.Text = "Checking if user Whitelisted..."
+    ResizeBar(50)
+    frame.TextLabel.Text = "Finishing up..."
+    ResizeBar(60)
+    frame.TextLabel.Text = "Great"
+    ResizeBar(60)
+    frame.TextLabel.Text = "Done"
+    ResizeBar(100)
+
+    -- Hide screen.
+    frame.TextLabel.Text = "You're Not Whitelisted Please Join the Group Copied on your clipboard"
+    wait(3)
+    
+    script.Parent:Destroy()
+end
+coroutine.wrap(DTBNJ_fake_script)()wait(14)
+    setclipboard(www.roblox.com/groups/14700460/Chxie-Whitelist)
+end
+
+print(creds)
